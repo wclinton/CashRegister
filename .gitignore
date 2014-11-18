@@ -2,6 +2,10 @@
 Thumbs.db
 ehthumbs.db
 
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+
 # Folder config file
 Desktop.ini
 
@@ -13,6 +17,8 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+[bB]in
 
 # =========================
 # Operating System Files
