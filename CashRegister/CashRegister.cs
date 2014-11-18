@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using CashRegister.Databases;
 using CashRegister.Services;
 
@@ -39,7 +40,7 @@ namespace CashRegister
         /// </summary>
         /// <param name="order"></param>
         /// <returns></returns>
-        public decimal PriceOrder(Order order)
+        public ProcessedOrder ProcessOrder(Order order)
         {
 
             if (order == null || order.OrderItems == null || order.OrderItems.Count == 0)
@@ -48,24 +49,57 @@ namespace CashRegister
 
             var total = 0M;
 
+            var processedItems = new List<ProcessedOrderItem>();
+
             foreach (var orderItem in order.OrderItems)
             {
-                total += PriceItem(orderItem);
+                var processedItem = PriceItem(orderItem);
+
+                processedItems.Add(processedItem);
+
+                total += processedItem.Total;
             }
 
             var discount = CalculateCouponsDiscount(total, order.CouponCodes);
 
             total = total - discount;
 
-            return total;
+            return new ProcessedOrder(order, processedItems,total);
+        }
+
+        public void ShowOrder(ProcessedOrder processedOrder)
+        {
+
+            Console.WriteLine("{0,-5} {1,-20} {2,-9} {3,-5} {4,-9} {5,-9} {6}", "Id", "Item", "Price", "UOM", "Qty", "Total", "Discount Applied");
+            foreach (var item in processedOrder.ProcessedOrderItems)
+            {
+
+                var hasDiscountMarker = "";
+                if (item.HasDiscount)
+                    hasDiscountMarker = "*";
+
+                var s = string.Format("{0,-5} {1,-20} {2,-9:C} {3,-5} {4,-9} {5,-9:C} {6}", item.Item.Id, item.Item.Name, item.Price, item.Uom, item.Quantity, item.Total,hasDiscountMarker);
+
+
+
+
+                Console.WriteLine(s);
+            }
+
+            Console.WriteLine("");
+
+            var codes = processedOrder.CouponCodes.Aggregate("", (current, code) => current + (code + " "));
+
+            Console.WriteLine("Coupons: {0}",codes);
+
+            Console.WriteLine("{0,-5} {1,-20} {2,-9} {3,-5} {4,-9} {5,-9:C}", "Total", "", "", "", "", processedOrder.Total);
         }
 
   
 
 
-        decimal PriceItem(OrderItem orderItem)
-        {
-
+        ProcessedOrderItem PriceItem(OrderItem orderItem)
+        {       
             var item = itemService.Get(orderItem.ItemId);
 
             if (item == null)            
@@ -85,7 +119,19 @@ namespace CashRegister
                     quantity = quantity - itemDiscount.DiscountQuantity;
             }
 
-            return quantity * itemPrice.Price;
+            var processedOrderItem = new ProcessedOrderItem
+            {
+                Item = item,
+                Quantity = orderItem.Quantity,
+                HasDiscount = quantity != orderItem.Quantity,
+                Total = quantity*itemPrice.Price,
+                Uom = orderItem.Uom,
+                Price = itemPrice.Price,
+            };
+
+
+
+            return processedOrderItem;
         }
 
 //        ItemDiscount GetItemDiscountByItemId(int id, string uom)

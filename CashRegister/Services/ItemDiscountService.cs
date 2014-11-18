@@ -17,7 +17,7 @@ namespace CashRegister.Services
 
         public ItemDiscount GetItemDiscountByItemId(int id, string uom)
         {
-            return db.ItemDiscounts.Single(x => x.ItemId == id && x.Uom == uom);
+            return db.ItemDiscounts.SingleOrDefault(x => x.ItemId == id && x.Uom == uom);
         }
     }
 }

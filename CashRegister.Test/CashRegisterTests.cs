@@ -57,7 +57,7 @@ namespace CashRegister.Test
                 OrderItems = orderItems,
             };
 
-            cashRegister.PriceOrder(order);
+            cashRegister.ProcessOrder(order);
 
         }
 
@@ -79,8 +79,8 @@ namespace CashRegister.Test
                 OrderItems = orderItems,
             };
 
-            var total = cashRegister.PriceOrder(order);
-            Assert.AreEqual(3, total);
+            var processOrder = cashRegister.ProcessOrder(order);
+            Assert.AreEqual(3, processOrder.Total);
         }
 
         [TestMethod]
@@ -110,9 +110,9 @@ namespace CashRegister.Test
                 OrderItems = orderItems,
             };
 
-            var total = cashRegister.PriceOrder(order);
+            var processedOrder = cashRegister.ProcessOrder(order);
 
-            Assert.AreEqual(15, total);
+            Assert.AreEqual(15, processedOrder.Total);
         }
 
         [TestMethod]
@@ -144,9 +144,9 @@ namespace CashRegister.Test
                 OrderItems = orderItems,
             };
 
-            var total = cashRegister.PriceOrder(order);
+            var processOrder = cashRegister.ProcessOrder(order);
 
-            Assert.AreEqual(63, total);
+            Assert.AreEqual(63, processOrder.Total);
         }
 
         [TestMethod]
@@ -177,9 +177,9 @@ namespace CashRegister.Test
                 CouponCodes = new List<string> { "BUY10SAVE1" }
             };
 
-            var total = cashRegister.PriceOrder(order);
+            var processOrder = cashRegister.ProcessOrder(order);
 
-            Assert.AreEqual(14, total);
+            Assert.AreEqual(14, processOrder.Total);
         }
 
         [TestMethod]
@@ -203,9 +203,9 @@ namespace CashRegister.Test
                 OrderItems = orderItems,
             };
 
-            var total = cashRegister.PriceOrder(order);
+            var processedOrder = cashRegister.ProcessOrder(order);
 
-            Assert.AreEqual(2000, total);
+            Assert.AreEqual(2000, processedOrder.Total);
         }
 
 

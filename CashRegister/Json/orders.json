@@ -1,8 +1,9 @@
 ﻿{
     "OrderItems": 
     [
-        { "ItemId": 1, "Quantity": 11.0, "Uom": "each" }
+        { "ItemId": 1, "Quantity": 11.0, "Uom": "lbs" },
+        { "ItemId": 2, "Quantity": 11.0, "Uom": "box" }
     ],
-    "CouponCodes": [ "" ] 
+    "CouponCodes": [ "OVER100GETS10","OVER10GETS1"] 
 
 }
