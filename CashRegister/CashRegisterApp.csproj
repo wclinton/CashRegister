@@ -112,19 +112,19 @@
     <None Include="CashRegisterData.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="coupons.json">
+    <None Include="Json\coupons.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="itemdiscounts.json">
+    <None Include="Json\itemdiscounts.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="itemprices.json">
+    <None Include="Json\itemprices.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="items.json">
+    <None Include="Json\items.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="orders.json">
+    <None Include="Json\orders.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

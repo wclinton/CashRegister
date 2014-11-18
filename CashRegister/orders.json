@@ -1,8 +1,0 @@
-﻿{
-    "OrderItems": 
-    [
-        { "ItemId": 1, "Quantity": 11.0, "Uom": "each" }
-    ],
-    "CouponCodes": [ "" ] 
-
-}
