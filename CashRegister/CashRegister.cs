@@ -116,7 +116,17 @@ namespace CashRegister
             if (itemDiscount != null)
             {
                 if (orderItem.Quantity > itemDiscount.MinQuantity)
-                    quantity = quantity - itemDiscount.DiscountQuantity;
+                {
+                    if (orderItem.Quantity > itemDiscount.MinQuantity + itemDiscount.DiscountQuantity)
+                    {
+                        //subtract the whole thing
+                        quantity = quantity - itemDiscount.DiscountQuantity;
+                    }
+                    else
+                    {
+                        quantity = itemDiscount.MinQuantity;
+                    }                   
+                }
             }
 
             var processedOrderItem = new ProcessedOrderItem

@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using CashRegister.Databases;
 
 namespace CashRegister.Databases
 {

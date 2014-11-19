@@ -185,27 +185,43 @@ namespace CashRegister.Test
         [TestMethod]
         public void CanHandleItemDiscount()
         {
-
             SetItemDiscounts();
+         
+            //Should get a discount here of buy 50 get 5 free - so 50x40 = 2000
+            var processedOrder = cashRegister.ProcessOrder(GetTestOrder(1,55,"lb"));           
+            Assert.AreEqual(2000, processedOrder.Total);
 
+            //Should get a discount here too - but total should be the same = 2000
+            processedOrder = cashRegister.ProcessOrder(GetTestOrder(1, 51, "lb"));
+            Assert.AreEqual(2000, processedOrder.Total);
+
+            //Should get a discount of 5 items so should only pay for 51 items = 2040
+            processedOrder = cashRegister.ProcessOrder(GetTestOrder(1, 56, "lb"));           
+            Assert.AreEqual(2040, processedOrder.Total);
+
+            //Should still only get a discount of 5 items so should only pay for 145 items = 2040
+            processedOrder = cashRegister.ProcessOrder(GetTestOrder(1, 150, "lb"));
+            Assert.AreEqual(5800, processedOrder.Total);
+
+        }
+
+        private static Order GetTestOrder(int itemId, decimal quantity, string uom)
+        {
             var orderItems = new List<OrderItem>
             {
                 new OrderItem
                 {
-                    ItemId = 1,
-                    Quantity = 55,
-                    Uom = "lb",
-                },               
+                    ItemId = itemId,
+                    Quantity = quantity,
+                    Uom = uom,
+                },
             };
 
             var order = new Order
             {
                 OrderItems = orderItems,
             };
-
-            var processedOrder = cashRegister.ProcessOrder(order);
-
-            Assert.AreEqual(2000, processedOrder.Total);
+            return order;
         }
 
 
