@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7d185d91-206f-4959-a47c-ebfef97a7c52" name="cliwa01@BCR715427 2014-11-18 17:24:03" runUser="BEST\cliwa01" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="b585ea96-513f-4340-ae56-be1e9e4f606c">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="cliwa01_BCR715427 2014-11-18 17_24_03" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2014-11-18T17:24:03.8959105-08:00" queuing="2014-11-18T17:24:04.1679261-08:00" start="2014-11-18T17:24:04.2329298-08:00" finish="2014-11-18T17:24:04.6939561-08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanHandleItemDiscount" storage="cashregister.test\bin\debug\cashregister.test.dll" id="cce8ebef-fcbe-0fc1-e885-1a03d11d2421">
+      <Execution id="36f76f38-7af8-4825-b797-17139b8500d9" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanHandleItemDiscount" />
+    </UnitTest>
+    <UnitTest name="CanHandleSingleCoupon" storage="cashregister.test\bin\debug\cashregister.test.dll" id="6153121b-2f97-e019-2f63-2336a5b1eae4">
+      <Execution id="45985b74-a332-4243-bbda-f50284e9aa1d" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanHandleSingleCoupon" />
+    </UnitTest>
+    <UnitTest name="CanPriceMultpleItemAndUom" storage="cashregister.test\bin\debug\cashregister.test.dll" id="df6b038d-d11a-f1e1-8742-28f7c706a330">
+      <Execution id="05fc15fd-b02f-45ea-8544-4ba0fe0a803b" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanPriceMultpleItemAndUom" />
+    </UnitTest>
+    <UnitTest name="CanPriceOneItem" storage="cashregister.test\bin\debug\cashregister.test.dll" id="01541959-e64a-f438-62ea-cad4d2a73a55">
+      <Execution id="c1e5d69c-25b6-4ec0-a04d-3333772345ea" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanPriceOneItem" />
+    </UnitTest>
+    <UnitTest name="CannotPriceNonExistingItem" storage="cashregister.test\bin\debug\cashregister.test.dll" id="5dd6f7a1-1cc0-5640-59f8-8462095252bc">
+      <Execution id="34ba2be8-be6b-4065-8b4c-ffd60b722538" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CannotPriceNonExistingItem" />
+    </UnitTest>
+    <UnitTest name="CanPriceMultpleItem" storage="cashregister.test\bin\debug\cashregister.test.dll" id="15a3ec67-ec54-bf0e-80f3-d2930992c9f3">
+      <Execution id="f50f9cfe-f62d-477c-ac01-245151cb5652" />
+      <TestMethod codeBase="C:/dev/github/CashRegister/CashRegister.Test/bin/debug/CashRegister.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CashRegister.Test.CashRegisterTests, CashRegister.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanPriceMultpleItem" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="cce8ebef-fcbe-0fc1-e885-1a03d11d2421" executionId="36f76f38-7af8-4825-b797-17139b8500d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6153121b-2f97-e019-2f63-2336a5b1eae4" executionId="45985b74-a332-4243-bbda-f50284e9aa1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5dd6f7a1-1cc0-5640-59f8-8462095252bc" executionId="34ba2be8-be6b-4065-8b4c-ffd60b722538" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15a3ec67-ec54-bf0e-80f3-d2930992c9f3" executionId="f50f9cfe-f62d-477c-ac01-245151cb5652" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df6b038d-d11a-f1e1-8742-28f7c706a330" executionId="05fc15fd-b02f-45ea-8544-4ba0fe0a803b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01541959-e64a-f438-62ea-cad4d2a73a55" executionId="c1e5d69c-25b6-4ec0-a04d-3333772345ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="36f76f38-7af8-4825-b797-17139b8500d9" testId="cce8ebef-fcbe-0fc1-e885-1a03d11d2421" testName="CanHandleItemDiscount" computerName="BCR715427" duration="00:00:00.1569542" startTime="2014-11-18T17:24:04.2569311-08:00" endTime="2014-11-18T17:24:04.6369529-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36f76f38-7af8-4825-b797-17139b8500d9">
+    </UnitTestResult>
+    <UnitTestResult executionId="45985b74-a332-4243-bbda-f50284e9aa1d" testId="6153121b-2f97-e019-2f63-2336a5b1eae4" testName="CanHandleSingleCoupon" computerName="BCR715427" duration="00:00:00.0056810" startTime="2014-11-18T17:24:04.6379529-08:00" endTime="2014-11-18T17:24:04.6459534-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45985b74-a332-4243-bbda-f50284e9aa1d">
+    </UnitTestResult>
+    <UnitTestResult executionId="34ba2be8-be6b-4065-8b4c-ffd60b722538" testId="5dd6f7a1-1cc0-5640-59f8-8462095252bc" testName="CannotPriceNonExistingItem" computerName="BCR715427" duration="00:00:00.0038898" startTime="2014-11-18T17:24:04.6469535-08:00" endTime="2014-11-18T17:24:04.6529538-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34ba2be8-be6b-4065-8b4c-ffd60b722538">
+    </UnitTestResult>
+    <UnitTestResult executionId="f50f9cfe-f62d-477c-ac01-245151cb5652" testId="15a3ec67-ec54-bf0e-80f3-d2930992c9f3" testName="CanPriceMultpleItem" computerName="BCR715427" duration="00:00:00.0016216" startTime="2014-11-18T17:24:04.6539539-08:00" endTime="2014-11-18T17:24:04.6579541-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f50f9cfe-f62d-477c-ac01-245151cb5652">
+    </UnitTestResult>
+    <UnitTestResult executionId="05fc15fd-b02f-45ea-8544-4ba0fe0a803b" testId="df6b038d-d11a-f1e1-8742-28f7c706a330" testName="CanPriceMultpleItemAndUom" computerName="BCR715427" duration="00:00:00.0014733" startTime="2014-11-18T17:24:04.6589541-08:00" endTime="2014-11-18T17:24:04.6619543-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05fc15fd-b02f-45ea-8544-4ba0fe0a803b">
+    </UnitTestResult>
+    <UnitTestResult executionId="c1e5d69c-25b6-4ec0-a04d-3333772345ea" testId="01541959-e64a-f438-62ea-cad4d2a73a55" testName="CanPriceOneItem" computerName="BCR715427" duration="00:00:00.0013597" startTime="2014-11-18T17:24:04.6629544-08:00" endTime="2014-11-18T17:24:04.6649545-08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1e5d69c-25b6-4ec0-a04d-3333772345ea">
+    </UnitTestResult>
+  </Results>
+</TestRun>
