@@ -1,7 +1,8 @@
 ﻿[
-    {"ItemId": 1, "Uom": "each", "Price": 0.50 },
-    {"ItemId": 1, "Uom": "lbs", "Price": 2.49 },  
-    {"ItemId": 2,"Uom": "box", "Price": 6.99 }  
+    { "ItemId": 1, "Uom": "each", "Price": 0.50 },
+    { "ItemId": 1, "Uom": "lbs", "Price": 2.49 },
+    { "ItemId": 2, "Uom": "box", "Price": 6.99 },
+    { "ItemId": 3, "Uom": "carton", "Price": 6.99 },
+    { "ItemId": 4, "Uom": "each", "Price": 1200.00 },
+    { "ItemId": 5, "Uom": "each", "Price": 499.00 }
 ]
-
- 
